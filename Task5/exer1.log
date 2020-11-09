@@ -1,0 +1,29 @@
+aws_instance.UdacityT2[3]: Creating...
+aws_instance.UdacityM4[0]: Creating...
+aws_instance.UdacityT2[2]: Creating...
+aws_instance.UdacityT2[1]: Creating...
+aws_instance.UdacityM4[1]: Creating...
+aws_instance.UdacityT2[0]: Creating...
+aws_instance.UdacityT2[1]: Still creating... [10s elapsed]
+aws_instance.UdacityM4[0]: Still creating... [10s elapsed]
+aws_instance.UdacityT2[2]: Still creating... [10s elapsed]
+aws_instance.UdacityT2[3]: Still creating... [10s elapsed]
+aws_instance.UdacityT2[0]: Still creating... [10s elapsed]
+aws_instance.UdacityM4[1]: Still creating... [10s elapsed]
+aws_instance.UdacityT2[3]: Still creating... [20s elapsed]
+aws_instance.UdacityT2[1]: Still creating... [20s elapsed]
+aws_instance.UdacityM4[0]: Still creating... [20s elapsed]
+aws_instance.UdacityT2[2]: Still creating... [20s elapsed]
+aws_instance.UdacityT2[0]: Still creating... [20s elapsed]
+aws_instance.UdacityM4[1]: Still creating... [20s elapsed]
+aws_instance.UdacityM4[0]: Creation complete after 26s [id=i-0a90f3a44506d6ff7]
+aws_instance.UdacityT2[3]: Creation complete after 27s [id=i-0ff46dceb7b0cda6d]
+aws_instance.UdacityT2[0]: Creation complete after 27s [id=i-09d1e63b2aa50e706]
+aws_instance.UdacityT2[1]: Still creating... [30s elapsed]
+aws_instance.UdacityT2[2]: Still creating... [30s elapsed]
+aws_instance.UdacityM4[1]: Still creating... [30s elapsed]
+aws_instance.UdacityM4[1]: Creation complete after 37s [id=i-00afb30692a1da0ca]
+aws_instance.UdacityT2[1]: Creation complete after 38s [id=i-0eeba4c7269b9fe7c]
+aws_instance.UdacityT2[2]: Creation complete after 38s [id=i-02cf5125fe4ee9c88]
+
+Apply complete! Resources: 6 added, 0 changed, 0 destroyed.

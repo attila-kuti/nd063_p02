@@ -1,0 +1,21 @@
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+My Estimate,US East (N. Virginia),,Amazon EC2,0,12631.8,151581.6,USD,"Operating system (Linux), Quantity (600), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage for each EC2 instance (General Purpose SSD (gp2)), Storage amount (20 GB), Instance type (t3.medium)"
+My Estimate,US East (N. Virginia),,S3 Standard,0,109.54,1314.48,USD,S3 Standard storage (800 GB per month)
+My Estimate,US East (N. Virginia),,Data Transfer,0,92.07,1104.84,USD,"DT Inbound: Not selected (0 TB per month) 
+, DT Outbound: Internet (1 TB per month) 
+, Data transfer cost (92.07)"
+My Estimate,US East (N. Virginia),,Amazon Virtual Private Cloud (VPC),0,78.93,947.16,USD,Number of NAT Gateways (1)
+My Estimate,US East (N. Virginia),,Elastic Load Balancing,0,873.81,10485.72,USD,Number of Application Load Balancers (2)
+My Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,3737.81,44853.72,USD,"Quantity (10), Pricing strategy (Standard Reserved Instances 1 Year No Upfront), Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (199 GB), Instance type (db.t3.xlarge), Additional backup storage (5 TB)"
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Acknowledgement,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,
+,,,,,,,,
+CHANGE made: ,"Number of EC2 instances increased to 600 to reduce response times, reduce CPU usage.",,,,,,,
+CHANGE made: ,"Number of READ replicas increased from 1 to 9 (distributed to both AZ-s) -> better performance, higher availability. ",,,,,,,
+CHANGE made: ,Increased server size t3.large -> t3.xlarge (even larger would be fit to budget). Exact requirement details are unknown. Real load testing would help.,,,,,,,
+CHANGE made: ,BACKUP storage has been added too!,,,,,,,
+,,,,,,,,
+QUESTION:,NOT clear if Tx burstable instances and CPU credits may or may not be used by Reservation and/or upfront payments?! Costs could be considerably reduced by them.,,,,,,,
