@@ -15,7 +15,7 @@ This READ ME file simply shows the results and adds some comments.
 # Task 1 Social Media application for 50K
 ## Part 1 - Diagram with Servers:
 
-![Diagram1](./Task1-2/p02_task1_akuti_20201107.png)
+![Diagram1](Task1-2/p02_task1_akuti_20201107.png)
 
 ## Part 2 - Diagram with Serverless solution:
 
