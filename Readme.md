@@ -19,7 +19,7 @@ This READ ME file simply shows the results and adds some comments.
 
 ## Part 2 - Diagram with Serverless solution:
 
-![Diagram1](Task1-2\p02_task2_akuti_20201107.png)
+![Diagram1](Task1-2/p02_task2_akuti_20201107.png)
 
 # Task 2 Cost Estimates for Social Media Infra
 
@@ -100,13 +100,13 @@ QUESTION:,NOT clear if Tx burstable instances and CPU credits may or may not be 
 
 Password Policy created:
 
-![Password policy](Task3\udacity_password_policy.png)
+![Password policy](Task3/udacity_password_policy.png)
 
 ## CloudTrail users and groups
 
 Users and Groups have been created:
 
-![ReviewersAccountants](Task3\users-and-groups.png)
+![ReviewersAccountants](Task3/users-and-groups.png)
 
 ## Logs for Cloudtrail in CSV {#cloudtrail-log}
 
@@ -114,7 +114,7 @@ Logs as CSV was not found.
 I could only find these log files.
 
 ```
-Task3\941342625553_CloudTrail_us-east-1_20201108T2000Z_cv0yHZaYW9f7LIfG.json(1).gz 
+Task3/941342625553_CloudTrail_us-east-1_20201108T2000Z_cv0yHZaYW9f7LIfG.json(1).gz 
 ->
 941342625553_CloudTrail_us-east-1_20201108T2000Z_cv0yHZaYW9f7LIfG.json(1)
 
@@ -124,7 +124,7 @@ Task3\941342625553_CloudTrail_us-east-1_20201108T2000Z_cv0yHZaYW9f7LIfG.json(1).
 
 I could create cost monitoring, but remained in "Insufficient Data" state...
 
-![Monitoring](Task4\Cloudwatch_Alarm.png)
+![Monitoring](Task4/Cloudwatch_Alarm.png)
 
 
 # Task 5 Terraform
@@ -134,33 +134,33 @@ I could create cost monitoring, but remained in "Insufficient Data" state...
 All done: 
 Source files provided:
 
-- Task5\Exercise1\main.tf
+- Task5/Exercise1/main.tf
 
-![EC2-1](Task5\Terraform_1_1.png)
+![EC2-1](Task5/Terraform_1_1.png)
 
 
 After removing M4 instances (count -> 0)
 
-- Task5\Exercise1\main-to-destroy2_m4.tf
+- Task5/Exercise1/main-to-destroy2_m4.tf
 
-![EC2-1](Task5\Terraform_1_2.png)
+![EC2-1](Task5/Terraform_1_2.png)
 
 
 ## Part 2 Lambda
 
 Lambda function created, but I could not resolve the python function dependencies on os environment variable: greeting
-See Terraform source codes in the folder: *Task5\Exercise2*
+See Terraform source codes in the folder: *Task5/Exercise2*
 
 Lambda function was deployed:
 
-![EC2-1](Task5\lambda_deployed.png)
+![EC2-1](Task5/lambda_deployed.png)
 
 Lambda function was invoked with success and also with errors:
-![EC2-1](Task5\lambda_monitor.png)
+![EC2-1](Task5/lambda_monitor.png)
 
 ### Logs for lambda {#lambda-logs}
 Logs in CloudTrail for Lambda i could not find... why?
-![EC2-1](Task5\log_groups.png)
+![EC2-1](Task5/log_groups.png)
 
 
 
