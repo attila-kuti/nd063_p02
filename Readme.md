@@ -5,10 +5,10 @@ This READ ME file simply shows the results and adds some comments.
 
 
 ### Questions from my side
-1. I could not find Cloud trail logs in CSV format! Where should i find it. [See details here](#cloudtrail-log)
-2. My cost monitoring alarm remains in insufficient data state. Why? [See details here](#cost-monitoring)
-3. I could not find Logs for lambda. Why [See details here](#lambda-logs)
-4. What is the exercise about the VPC and EC2 instances in connection with the lambda function?
+1. Cloud trail logs in CSV format found! :)
+2. Cost monitor now working. Unit was not selected.
+3. Lambda logs defined and attached.
+4. What is the exercise about the VPC and EC2 instances in connection with the lambda function? I guess they are not relevant. Or i should configure VPC for the lambda? There are some complexity there..
 
 
 
@@ -109,16 +109,8 @@ Users and Groups have been created:
 ![ReviewersAccountants](Task3/users-and-groups.png)
 
 ## Logs for Cloudtrail in CSV {#cloudtrail-log}
+![logs](Task3\UdacityCloudTrailLog.csv )
 
-Logs as CSV was not found.
-I could only find these log files.
-
-```
-Task3/941342625553_CloudTrail_us-east-1_20201108T2000Z_cv0yHZaYW9f7LIfG.json(1).gz 
-->
-941342625553_CloudTrail_us-east-1_20201108T2000Z_cv0yHZaYW9f7LIfG.json(1)
-
-```
 
 # Task 4 Cost Monitoring {#cost-monitoring}
 
@@ -133,6 +125,7 @@ I could create cost monitoring, but remained in "Insufficient Data" state...
 
 All done: 
 Source files provided:
+TAGS have been added...
 
 - Task5/Exercise1/main.tf
 
@@ -155,13 +148,80 @@ Lambda function was deployed:
 
 ![EC2-1](Task5/lambda_deployed.png)
 
+lambda permission set....
+![permissions](Task5\lamba_permissions.png)
+
 Lambda function was invoked with success and also with errors:
 ![EC2-1](Task5/lambda_monitor.png)
 
 ### Logs for lambda {#lambda-logs}
-Logs in CloudTrail for Lambda i could not find... why?
-![EC2-1](Task5/log_groups.png)
+![EC2-1](Task5/Terraform_2_3.png)
 
 
+# Task 6 Destoying
+## EC2 Destroy - Terraform_destroyed.png
+![EC2-3](Task6\Terraform_destroyed.png)
 
+
+```
+Plan: 0 to add, 0 to change, 4 to destroy.
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+aws_instance.UdacityT2[3]: Destroying... [id=i-070d49a1f97547be6]
+aws_instance.UdacityT2[0]: Destroying... [id=i-0f06ab51c547c4b0a]
+aws_instance.UdacityT2[1]: Destroying... [id=i-0e8054251527f7f57]
+aws_instance.UdacityT2[2]: Destroying... [id=i-09242b22581d21115]
+aws_instance.UdacityT2[2]: Still destroying... [id=i-09242b22581d21115, 10s elapsed]
+aws_instance.UdacityT2[3]: Still destroying... [id=i-070d49a1f97547be6, 10s elapsed]
+aws_instance.UdacityT2[1]: Still destroying... [id=i-0e8054251527f7f57, 10s elapsed]
+aws_instance.UdacityT2[0]: Still destroying... [id=i-0f06ab51c547c4b0a, 10s elapsed]
+aws_instance.UdacityT2[3]: Still destroying... [id=i-070d49a1f97547be6, 20s elapsed]
+aws_instance.UdacityT2[1]: Still destroying... [id=i-0e8054251527f7f57, 20s elapsed]
+aws_instance.UdacityT2[0]: Still destroying... [id=i-0f06ab51c547c4b0a, 20s elapsed]
+aws_instance.UdacityT2[2]: Still destroying... [id=i-09242b22581d21115, 20s elapsed]
+aws_instance.UdacityT2[0]: Still destroying... [id=i-0f06ab51c547c4b0a, 30s elapsed]
+aws_instance.UdacityT2[1]: Still destroying... [id=i-0e8054251527f7f57, 30s elapsed]
+aws_instance.UdacityT2[2]: Still destroying... [id=i-09242b22581d21115, 30s elapsed]
+aws_instance.UdacityT2[3]: Still destroying... [id=i-070d49a1f97547be6, 30s elapsed]
+aws_instance.UdacityT2[3]: Destruction complete after 32s
+aws_instance.UdacityT2[2]: Destruction complete after 32s
+aws_instance.UdacityT2[1]: Destruction complete after 32s
+aws_instance.UdacityT2[0]: Still destroying... [id=i-0f06ab51c547c4b0a, 40s elapsed]
+aws_instance.UdacityT2[0]: Still destroying... [id=i-0f06ab51c547c4b0a, 50s elapsed]
+aws_instance.UdacityT2[0]: Destruction complete after 53s
+
+Destroy complete! Resources: 4 destroyed.
+```
+
+
+## Lambda Destroy
+
+```
+Plan: 0 to add, 0 to change, 4 to destroy.
+
+Changes to Outputs:
+  - lambda_name = "greet_lambda" -> null
+
+Do you really want to destroy all resources?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+aws_iam_role_policy_attachment.lambda_logs: Destroying... [id=iam_role_for_lambda-20201111174403233800000001]
+module.lambda.aws_lambda_function.lambda: Destroying... [id=greet_lambda]
+aws_iam_role_policy_attachment.lambda_logs: Destruction complete after 1s
+aws_iam_policy.lambda_logging: Destroying... [id=arn:aws:iam::941342625553:policy/lambda_logging]
+module.lambda.aws_lambda_function.lambda: Destruction complete after 1s
+aws_iam_role.iam_role_for_lambda: Destroying... [id=iam_role_for_lambda]
+aws_iam_policy.lambda_logging: Destruction complete after 1s
+aws_iam_role.iam_role_for_lambda: Destruction complete after 1s
+
+Destroy complete! Resources: 4 destroyed.
+```
 
