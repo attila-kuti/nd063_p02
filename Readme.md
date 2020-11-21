@@ -4,11 +4,9 @@ Project 02 - Attila Kuti
 This READ ME file simply shows the results and adds some comments.
 
 
-### Questions from my side
-1. Cloud trail logs in CSV format found! :)
-2. Cost monitor now working. Unit was not selected.
-3. Lambda logs defined and attached.
-4. What is the exercise about the VPC and EC2 instances in connection with the lambda function? I guess they are not relevant. Or i should configure VPC for the lambda? There are some complexity there..
+### Improvements driven by Review Comments
+1. Task5: EC2 instances were renamed. Terraform_1_1/2.png updated
+2. Task5: Lambda variables have always been used, (in lambda module, although not outsourced in variables.tf... there were only 5 of them. Now outsourced.)
 
 
 
